@@ -1,52 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bombóncito - Baking & Recipes</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-  <script>
-  const searchBar = document.getElementById('searchBar');
-  const recipes = document.querySelectorAll('.recipe-card');
-
-  searchBar.addEventListener('input', () => {
-    const query = searchBar.value.toLowerCase();
-    recipes.forEach(card => {
-      const title = card.querySelector('h2').textContent.toLowerCase();
-      if (title.includes(query)) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-</script>
 <body>
   <header>
-    <header>
-  <img src="./logo.png" alt="Bombóncito Logo" class="logo">
-  <h1>Bombóncito</h1>
-  <p>Delicate baking & cozy recipes</p>
-</header>
+    <img src="./logo.png" alt="Bombóncito Logo" class="logo" />
     <h1>Bombóncito</h1>
-    <p>Baking & Recipe Blog</p>
+    <p>Delicate baking & cozy recipes</p>
   </header>
 
   <div class="search-container">
-    <input type="text" id="searchBar" placeholder="Search recipes...">
+    <input type="text" id="searchBar" placeholder="Search recipes..." />
   </div>
 
   <main class="recipe-grid">
     <div class="recipe-card">
       <a href="churros.html">
-        <img src="churros.jpg" alt="Churros">
+        <img src="churros.jpg" alt="Churros" />
         <h2>Churros</h2>
       </a>
     </div>
     <div class="recipe-card">
       <a href="fruitcake.html">
-        <img src="fruitcake.jpg" alt="Fruit Cake">
+        <img src="fruitcake.jpg" alt="Fruit Cake" />
         <h2>Fruit Cake</h2>
       </a>
     </div>
@@ -56,6 +36,20 @@
   <footer>
     <p>&copy; 2025 Bombóncito. All rights reserved.</p>
   </footer>
+
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    const recipes = document.querySelectorAll('.recipe-card');
+
+    searchBar.addEventListener('input', () => {
+      const query = searchBar.value.toLowerCase();
+      recipes.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
+
 
