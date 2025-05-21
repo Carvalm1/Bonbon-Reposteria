@@ -9,35 +9,44 @@
 </head>
 <body>
   <header class="main-header">
-    <img src="./logo.png" alt="Bombóncito Logo" class="logo">
+    <div class="logo-container">
+      <img src="./logo.png" alt="Bombóncito Logo" class="logo large-logo">
+    </div>
     <h1>Bombóncito</h1>
     <p>Delicate baking & cozy recipes</p>
-    <div class="header-right">
+
+    <div class="top-bar">
       <input type="text" id="searchBar" placeholder="Search recipes...">
-      <nav class="main-nav">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <img src="whisk-icon.png" alt="Baking" class="nav-icon"> Baking
-          </button>
-          <div class="dropdown-content">
-            <a href="sweet.html">Sweet</a>
-            <a href="salty.html">Salty</a>
-          </div>
+      <a href="contact.html" class="flower-link">Contact</a>
+      <a href="share.html" class="flower-link">Share</a>
+    </div>
+
+    <nav class="main-nav">
+      <div class="dropdown">
+        <button class="dropbtn">
+          <img src="whisk-icon.png" alt="Baking" class="nav-icon"> Baking
+        </button>
+        <div class="dropdown-content">
+          <a href="sweet.html">Sweet</a>
+          <a href="salty.html">Salty</a>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            <img src="chef-hat-icon.png" alt="Food" class="nav-icon"> Food
-          </button>
-          <div class="dropdown-content">
-            <a href="beef.html">Beef</a>
-            <a href="chicken.html">Chicken</a>
-            <a href="fish.html">Fish</a>
-            <a href="veggies.html">Veggies</a>
-          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <img src="chef-hat-icon.png" alt="Food" class="nav-icon"> Food
+        </button>
+        <div class="dropdown-content">
+          <a href="beef.html">Beef</a>
+          <a href="chicken.html">Chicken</a>
+          <a href="fish.html">Fish</a>
+          <a href="veggies.html">Veggies</a>
         </div>
-        <a href="share.html">Share</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      </div>
+    </nav>
+
+    <div class="baking-links">
+      <a href="salty.html" class="baking-tab left-tab">Salty</a>
+      <a href="sweet.html" class="baking-tab right-tab">Sweet</a>
     </div>
   </header>
 
