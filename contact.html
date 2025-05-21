@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Me - Bombóncito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <!-- Repeat nav bar here as well -->
+  </header>
+
+  <main style="max-width: 600px; margin: 40px auto; padding: 0 20px;">
+    <h1>Contact Me</h1>
+    <form id="contactForm">
+      <label for="Mariana">Name</label><br />
+      <input type="text" id="Mariana" name="Mariana" required /><br /><br />
+
+      <label for="email">Email</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="message">Message</label><br />
+      <textarea id="message" name="message" rows="6" required></textarea><br /><br />
+
+      <button type="submit" style="background:#b85c38; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">Send</button>
+    </form>
+    <p id="formStatus" style="margin-top:15px; color:green;"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bombóncito. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // For demo: just show a thank you message
+      status.textContent = 'Thanks for reaching out! I will get back to you soon.';
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>
