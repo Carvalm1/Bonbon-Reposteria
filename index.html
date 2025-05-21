@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bombóncito - Baking & Recipe</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bombóncito - Baking & Recipes</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="logo.pn" alt="Bombóncito Logo" class="logo" />
+    <img src="logo.png" alt="Bombóncito logo" class="logo">
     <h1>Bombóncito</h1>
-    <p>Baking & Recipe</p>
-    <input type="text" id="searchBar" onkeyup="searchRecipes()" placeholder="Search recipes...">
+    <p>Baking & Recipe Blog</p>
   </header>
 
-  <main>
-    <section class="recipes" id="recipeList">
-      <div class="recipe-card">
-        <a href="mini-fruit-cake.html">
-          <img src="mini-fruit-cake.jpg" alt="Mini Fruit Cake" />
-          <h3>Mini Fruit Cake</h3>
-        </a>
-      </div>
-      <div class="recipe-card">
-        <a href="churros.html">
-          <img src="churros.jpg" alt="Churros" />
-          <h3>Churros</h3>
-        </a>
-      </div>
-      <!-- Add more recipe cards here -->
-    </section>
+  <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search recipes...">
+  </div>
+
+  <main class="recipe-grid">
+    <div class="recipe-card">
+      <a href="churros.html">
+        <img src="churros.jpg" alt="Churros">
+        <h2>Churros</h2>
+      </a>
+    </div>
+    <div class="recipe-card">
+      <a href="fruitcake.html">
+        <img src="fruitcake.jpg" alt="Fruit Cake">
+        <h2>Fruit Cake</h2>
+      </a>
+    </div>
+    <!-- Add more recipes here -->
   </main>
 
-  <script>
-    function searchRecipes() {
-      const input = document.getElementById('searchBar').value.toLowerCase();
-      const cards = document.querySelectorAll('.recipe-card');
-      cards.forEach(card => {
-        const title = card.textContent.toLowerCase();
-        card.style.display = title.includes(input) ? '' : 'none';
-      });
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025 Bombóncito. All rights reserved.</p>
+  </footer>
 </body>
 </html>
 
