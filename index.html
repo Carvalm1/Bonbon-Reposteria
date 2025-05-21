@@ -6,6 +6,22 @@
   <title>Bombóncito - Baking & Recipes</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  const searchBar = document.getElementById('searchBar');
+  const recipes = document.querySelectorAll('.recipe-card');
+
+  searchBar.addEventListener('input', () => {
+    const query = searchBar.value.toLowerCase();
+    recipes.forEach(card => {
+      const title = card.querySelector('h2').textContent.toLowerCase();
+      if (title.includes(query)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script>
 <body>
   <header>
     <header>
