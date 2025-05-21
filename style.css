@@ -6,11 +6,15 @@ body {
   padding: 0;
 }
 
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
 header {
-  background-color: #ffc0cb;
-  padding: 1em;
   text-align: center;
-  border-bottom: 2px solid #f8a5c2;
+  background-color: #fff4f2;
+  padding: 2rem 1rem;
 }
 
 header h1 {
@@ -56,8 +60,4 @@ footer {
   font-size: 0.9em;
   color: #999;
 }
-.logo {
-  width: 180px;
-  margin: 20px auto;
-  display: block;
-}
+
