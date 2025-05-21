@@ -1,105 +1,57 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bombóncito - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bombóncito - Baking & Recipes</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <header>
-    <div class="header-left">
-      <img src="./logo.png" alt="Bombóncito Logo" class="logo" />
-      <div>
-        <h1>Bombóncito</h1>
-        <p>Delicate baking & cozy recipes</p>
-      </div>
-    </div>
-
-    <div class="header-right">
-      <div class="search-container">
-        <input type="text" id="searchBar" placeholder="Search recipes..." />
-      </div>
-
-      <nav>
-        <!-- Baking Nav Item -->
-        <div class="nav-item">
-          <!-- Whisk Icon SVG -->
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3.4 18.2c-.2.1-.3.4-.2.6l1.5 3.4c.1.2.3.3.6.3.2 0 .3-.1.4-.2l4.8-7.6-1.8-1.7-4.3 5zm17-10.3-6.5 9.7c-.3.5-1 .7-1.5.5l-5.3-2.4 5-7.6c.3-.4.4-1 .2-1.5l-1.4-3c-.1-.3-.3-.5-.6-.6-.3-.2-.7-.1-1 .2L3.6 10c-.3.3-.3.8 0 1.1l3.3 3.2-2.8 3.3L7 20.6c.1.1.3.2.5.2s.4-.1.5-.3l6.3-9.2c.1-.1.1-.2.2-.4l.4-.7c.1-.1.2-.2.4-.3 1-1 3-3 3-3l.1-.1c.3-.3.3-.8 0-1.1-.3-.2-.7-.2-1 0z"/>
-          </svg>
-          <a href="#" class="nav-link">Baking Recipes</a>
-          <div class="dropdown">
-            <a href="sweet.html">Sweet</a>
-            <a href="salty.html">Salty</a>
-          </div>
-        </div>
-
-        <!-- Food Nav Item -->
-        <div class="nav-item">
-          <!-- Chef Hat Icon SVG -->
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 8c-.5-2-3-4-6-4-2.6 0-4.8 1.8-5.6 4H7c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-6c0-.9-.6-1.7-1.4-1.9zM8 16v-4h8v4H8z"/>
-          </svg>
-          <a href="#" class="nav-link">Food Recipes</a>
-          <div class="dropdown">
-            <a href="beef.html">Beef</a>
-            <a href="chicken.html">Chicken</a>
-            <a href="fish.html">Fish</a>
-            <a href="veggies.html">Veggies</a>
-          </div>
-        </div>
-
-        <!-- Contact Me -->
-        <div class="nav-item">
-          <a href="contact.html" class="nav-link">Contact Me</a>
-        </div>
-
-        <!-- Share -->
-        <div class="nav-item">
-          <a href="share.html" class="nav-link">Share</a>
-        </div>
-      </nav>
+  <header class="main-header">
+    <img src="logo.png" alt="Bombóncito Logo" class="logo" />
+    <h1>Bombóncito</h1>
+    <p>Delicate baking & cozy recipes</p>
+    <div class="search-container">
+      <input type="text" id="searchBar" placeholder="Search recipes..." />
     </div>
   </header>
 
-  <main class="recipe-grid" id="recipeGrid">
-    <!-- Sample Recipe Cards -->
-    <div class="recipe-card" data-category="sweet" data-protein="">
-      <a href="sweet.html#churros">
+  <nav class="navbar">
+    <ul>
+      <li class="dropdown">
+        <a href="#"><i class="fas fa-whisk"></i> Baking Recipes</a>
+        <ul class="dropdown-content">
+          <li><a href="sweet.html">Sweet</a></li>
+          <li><a href="salty.html">Salty</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#"><i class="fas fa-hat-chef"></i> Food Recipes</a>
+        <ul class="dropdown-content">
+          <li><a href="beef.html">Beef</a></li>
+          <li><a href="chicken.html">Chicken</a></li>
+          <li><a href="fish.html">Fish</a></li>
+          <li><a href="veggies.html">Veggies</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact Me</a></li>
+      <li><a href="share.html">Share</a></li>
+    </ul>
+  </nav>
+
+  <main class="recipe-grid">
+    <div class="recipe-card">
+      <a href="churros.html">
         <img src="churros.jpg" alt="Churros" />
-        <h2>Churros (Sweet)</h2>
+        <h2>Churros</h2>
       </a>
     </div>
-    <div class="recipe-card" data-category="salty" data-protein="">
-      <a href="salty.html#pretzel">
-        <img src="pretzel.jpg" alt="Pretzel" />
-        <h2>Pretzel (Salty)</h2>
-      </a>
-    </div>
-    <div class="recipe-card" data-category="" data-protein="beef">
-      <a href="beef.html#beef-stew">
-        <img src="beef_stew.jpg" alt="Beef Stew" />
-        <h2>Beef Stew</h2>
-      </a>
-    </div>
-    <div class="recipe-card" data-category="" data-protein="chicken">
-      <a href="chicken.html#chicken-curry">
-        <img src="chicken_curry.jpg" alt="Chicken Curry" />
-        <h2>Chicken Curry</h2>
-      </a>
-    </div>
-    <div class="recipe-card" data-category="" data-protein="fish">
-      <a href="fish.html#grilled-salmon">
-        <img src="grilled_salmon.jpg" alt="Grilled Salmon" />
-        <h2>Grilled Salmon</h2>
-      </a>
-    </div>
-    <div class="recipe-card" data-category="" data-protein="veggies">
-      <a href="veggies.html#stuffed-peppers">
-        <img src="stuffed_peppers.jpg" alt="Stuffed Peppers" />
-        <h2>Stuffed Peppers</h2>
+    <div class="recipe-card">
+      <a href="fruitcake.html">
+        <img src="fruitcake.jpg" alt="Fruit Cake" />
+        <h2>Fruit Cake</h2>
       </a>
     </div>
   </main>
