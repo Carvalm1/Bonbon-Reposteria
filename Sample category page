@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sweet Baking Recipes - Bombóncito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <!-- Repeat the same header as index.html for consistency -->
+    <!-- ... same nav bar and search -->
+  </header>
+
+  <main class="recipe-grid" id="recipeGrid">
+    <div class="recipe-card" id="churros">
+      <img src="churros.jpg" alt="Churros" />
+      <h2>Churros</h2>
+      <p>Crunchy cinnamon sugar doughnuts</p>
+    </div>
+    <div class="recipe-card" id="brownies">
+      <img src="brownies.jpg" alt="Brownies" />
+      <h2>Brownies</h2>
+      <p>Rich chocolate squares</p>
+    </div>
+    <!-- Add more sweet recipes -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bombóncito. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
