@@ -3,147 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bombóncito Recipes</title>
+  <title>Bombóncito - Baking & Recipe</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fdfaf6;
-      margin: 0;
-      padding: 0;
-      color: #2f3e2f;
-    }
-    header {
-      background-color: #f9e1e8;
-      padding: 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #2f3e2f;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #2f3e2f;
-    }
-    .hero {
-      text-align: center;
-      padding: 2rem;
-      background-color: #cbe3dc;
-    }
-    .hero h2 {
-      margin-top: 0;
-    }
-    .search-bar {
-      margin: 2rem auto;
-      max-width: 600px;
-      text-align: center;
-    }
-    .search-bar input {
-      width: 80%;
-      padding: 0.75rem;
-      border: 2px solid #a1b5a1;
-      border-radius: 8px;
-    }
-    .featured {
-      text-align: center;
-      padding: 2rem;
-    }
-    .recipe-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      padding: 1rem;
-    }
-    .card {
-      background-color: #fef1f3;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .card h4 {
-      margin: 0.5rem 0 0;
-      color: #2f3e2f;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #f9e1e8;
-    }
-  </style>
 </head>
 <body>
   <header>
+    <img src="b5b54b6e-2639-4826-aacc-c3c8ee944626.png" alt="Bombóncito Logo" class="logo" />
     <h1>Bombóncito</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#baking">Baking</a>
-      <a href="#cooking">Cooking</a>
-      <a href="#about">About</a>
-    </nav>
+    <p>Baking & Recipe</p>
+    <input type="text" id="searchBar" onkeyup="searchRecipes()" placeholder="Search recipes...">
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Wholesome & Sweet Recipes</h2>
-      <p>Cozy treats & elegant flavors — just like your favorite cafés.</p>
-    </section>
-
-    <section class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search for recipes..." onkeyup="filterRecipes()">
-    </section>
-
-    <section class="featured">
-      <h3>Choose a Recipe</h3>
-      <div class="recipe-grid" id="recipeGrid">
-        <div class="card">
-          <a href="mini-fruit-cake.html">
-            <img src="mini-fruit-cake.jpg" alt="Mini Fruit Cake">
-            <h4>Mini Fruit Cake</h4>
-          </a>
-        </div>
-        <div class="card">
-          <a href="churros.html">
-            <img src="churros.jpg" alt="Churros">
-            <h4>Churros</h4>
-          </a>
-        </div>
-        <div class="card">
-          <a href="tacos.html">
-            <img src="tacos.jpg" alt="Tacos">
-            <h4>Tacos</h4>
-          </a>
-        </div>
-        <!-- Add more cards here -->
+    <section class="recipes" id="recipeList">
+      <div class="recipe-card">
+        <a href="mini-fruit-cake.html">
+          <img src="mini-fruit-cake.jpg" alt="Mini Fruit Cake" />
+          <h3>Mini Fruit Cake</h3>
+        </a>
       </div>
-    </section>
-
-    <section id="about" style="text-align:center; padding: 2rem;">
-      <h3>About Bombóncito</h3>
-      <p>Welcome to Bombóncito, where comfort food meets delicate design. From weekend bakes to weekday dinners, you'll find inspiration and ease in every recipe.</p>
+      <div class="recipe-card">
+        <a href="churros.html">
+          <img src="churros.jpg" alt="Churros" />
+          <h3>Churros</h3>
+        </a>
+      </div>
+      <!-- Add more recipe cards here -->
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Bombóncito. Made with 🩷</p>
-  </footer>
-
   <script>
-    function filterRecipes() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
+    function searchRecipes() {
+      const input = document.getElementById('searchBar').value.toLowerCase();
+      const cards = document.querySelectorAll('.recipe-card');
       cards.forEach(card => {
-        const title = card.querySelector('h4').textContent.toLowerCase();
-        card.style.display = title.includes(input) ? 'block' : 'none';
+        const title = card.textContent.toLowerCase();
+        card.style.display = title.includes(input) ? '' : 'none';
       });
     }
   </script>
