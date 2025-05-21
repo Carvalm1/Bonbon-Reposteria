@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Share Bombóncito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <!-- Repeat nav bar -->
+  </header>
+
+  <main style="max-width: 600px; margin: 40px auto; padding: 0 20px;">
+    <h1>Share Bombóncito</h1>
+    <p>Spread the love by sharing this website:</p>
+
+    <div style="display:flex; gap: 15px; font-size: 28px; color: #b85c38;">
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
+        &#xf09a;
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20Bombóncito!&url=https://yourwebsite.com" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
+        &#xf099;
+      </a>
+      <a href="https://api.whatsapp.com/send?text=Check%20out%20Bombóncito!%20https://yourwebsite.com" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+        &#xf232;
+      </a>
+    </div>
+
+    <button id="copyBtn" style="margin-top:20px; padding: 8px 15px; border: none; background:#b85c38; color: white; border-radius: 5px; cursor:pointer;">
+      Copy Website Link
+    </button>
+
+    <p id="copyStatus" style="color:green; margin-top:10px;"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bombóncito. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const copyStatus = document.getElementById('copyStatus');
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.origin)
+        .then(() => {
+          copyStatus.textContent = 'Website URL copied to clipboard!';
+          setTimeout(() => copyStatus.textContent = '', 3000);
+        })
+        .catch(() => {
+          copyStatus.textContent = 'Failed to copy, please copy manually.';
+        });
+    });
+  </script>
+</body>
+</html>
