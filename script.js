@@ -1,18 +1,9 @@
-const searchBar = document.getElementById('searchBar');
-const recipeGrid = document.getElementById('recipeGrid');
-
-searchBar.addEventListener('input', () => {
-  const query = searchBar.value.toLowerCase();
-
-  const cards = recipeGrid.querySelectorAll('.recipe-card');
-
+// script.js
+document.getElementById('searchBar').addEventListener('input', function () {
+  const query = this.value.toLowerCase();
+  const cards = document.querySelectorAll('.recipe-card');
   cards.forEach(card => {
     const title = card.querySelector('h2').textContent.toLowerCase();
-
-    if (title.includes(query)) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display = title.includes(query) ? 'block' : 'none';
   });
 });
