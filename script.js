@@ -1,9 +1,24 @@
-// script.js
-document.getElementById('searchBar').addEventListener('input', function () {
-  const query = this.value.toLowerCase();
-  const cards = document.querySelectorAll('.recipe-card');
-  cards.forEach(card => {
-    const title = card.querySelector('h2').textContent.toLowerCase();
-    card.style.display = title.includes(query) ? 'block' : 'none';
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector(".dropbtn");
+    const content = dropdown.querySelector(".dropdown-content");
+
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      closeAllDropdowns();
+      content.style.display = "block";
+    });
   });
+
+  window.addEventListener("click", function () {
+    closeAllDropdowns();
+  });
+
+  function closeAllDropdowns() {
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+      content.style.display = "none";
+    });
+  }
 });
