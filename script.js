@@ -1,24 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdowns = document.querySelectorAll(".dropdown");
+document.addEventListener('DOMContentLoaded', function () {
+  const bakingMenu = document.querySelector('.baking-menu');
+  const foodMenu = document.querySelector('.food-menu');
 
-  dropdowns.forEach((dropdown) => {
-    const button = dropdown.querySelector(".dropbtn");
-    const content = dropdown.querySelector(".dropdown-content");
-
-    button.addEventListener("click", function (event) {
-      event.stopPropagation();
-      closeAllDropdowns();
-      content.style.display = "block";
+  if (bakingMenu) {
+    bakingMenu.addEventListener('click', function () {
+      document.querySelector('.baking-submenu').classList.toggle('show');
     });
-  });
+  }
 
-  window.addEventListener("click", function () {
-    closeAllDropdowns();
-  });
-
-  function closeAllDropdowns() {
-    document.querySelectorAll(".dropdown-content").forEach((content) => {
-      content.style.display = "none";
+  if (foodMenu) {
+    foodMenu.addEventListener('click', function () {
+      document.querySelector('.food-submenu').classList.toggle('show');
     });
   }
 });
