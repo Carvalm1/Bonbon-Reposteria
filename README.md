@@ -1,7 +1,7 @@
 <!-- README.md -->
 # Bombóncito 🍬
 
-A cozy and kawaii-themed baking and recipe blog. This site features categorized recipes with adorable icons and a responsive layout.
+A cozy baking and recipe blog.
 
 ## Structure
 - `index.html`: Homepage with navigation, recipe cards, and search.
