@@ -167,28 +167,4 @@ footer {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #fff0f5;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #dcb;
-  z-index: 10;
-}
 
-.submenu a {
-  display: block;
-  margin: 5px 0;
-  text-decoration: none;
-  color: #444;
-  font-family: 'Comic Sans MS', cursive;
-}
-
-.dropdown:hover {
-  cursor: pointer;
-}
-
-.show {
-  display: block;
-}
