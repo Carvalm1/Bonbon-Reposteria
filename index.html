@@ -1,69 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bombóncito - Baking & Recipes</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="main-header">
-    <div class="logo-container">
-      <img src="./logo.png" alt="Bombóncito Logo" class="logo large-logo">
-    </div>
-    <h1>Bombóncito</h1>
-    <p>Delicate baking & cozy recipes</p>
-
-    <div class="top-bar">
-      <input type="text" id="searchBar" placeholder="Search recipes...">
-      <a href="contact.html" class="flower-link">Contact</a>
+  <header>
+    <img src="logo.png" alt="Bombóncito Logo" class="logo" />
+    <div class="top-right">
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search recipes..." />
+      </div>
+      <a href="contact.html" class="flower-link">Contact Me</a>
       <a href="share.html" class="flower-link">Share</a>
-    </div>
-
-    <nav class="main-nav">
-      <div class="dropdown">
-        <button class="dropbtn">
-          <img src="./whisk-icon.png" alt="Baking" class="nav-icon"> Baking
-        </button>
-        <div class="dropdown-content">
-          <a href="sweet.html">Sweet</a>
-          <a href="salty.html">Salty</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">
-          <img src="chef-hat-icon.png" alt="Food" class="nav-icon"> Food
-        </button>
-        <div class="dropdown-content">
-          <a href="beef.html">Beef</a>
-          <a href="chicken.html">Chicken</a>
-          <a href="fish.html">Fish</a>
-          <a href="veggies.html">Veggies</a>
-        </div>
-      </div>
-    </nav>
     </div>
   </header>
 
-  <main class="recipe-grid">
-    <div class="recipe-card">
-      <a href="churros.html">
-        <img src="churros.jpg" alt="Churros">
-        <h2>Churros</h2>
-      </a>
+  <main>
+    <div class="homepage-border">
+      <!-- Baking Tab -->
+      <div class="tab-container">
+        <button class="tab whisk-icon" data-tab="baking">
+          🥄 Baking Recipes
+        </button>
+        <div class="tab-content" id="baking" style="display:none;">
+          <a href="sweet.html" class="subtab">Sweet</a>
+          <a href="salty.html" class="subtab">Salty</a>
+        </div>
+      </div>
+
+      <!-- Food Recipes Tab -->
+      <div class="tab-container">
+        <button class="tab chefhat-icon" data-tab="food">
+          👩‍🍳 Food Recipes
+        </button>
+        <div class="tab-content" id="food" style="display:none;">
+          <a href="beef.html" class="subtab">Beef</a>
+          <a href="chicken.html" class="subtab">Chicken</a>
+          <a href="fish.html" class="subtab">Fish</a>
+          <a href="veggies.html" class="subtab">Veggies</a>
+        </div>
+      </div>
     </div>
-    <div class="recipe-card">
-      <a href="fruitcake.html">
-        <img src="fruitcake.jpg" alt="Fruit Cake">
-        <h2>Fruit Cake</h2>
-      </a>
-    </div>
-    <!-- More recipe cards -->
   </main>
 
   <footer>
     <p>&copy; 2025 Bombóncito. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
