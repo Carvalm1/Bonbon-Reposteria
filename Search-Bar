@@ -1,0 +1,21 @@
+<nav class="nav-bar">
+  <div class="dropdown baking-menu">
+    <img src="kawaii-whisk.png" alt="Whisk Icon" />
+    <span>Baking Recipes</span>
+    <div class="submenu baking-submenu">
+      <a href="sweet.html">Sweet</a>
+      <a href="salty.html">Salty</a>
+    </div>
+  </div>
+
+  <div class="dropdown food-menu">
+    <img src="kawaii-chefhat.png" alt="Chef Hat Icon" />
+    <span>Food Recipes</span>
+    <div class="submenu food-submenu">
+      <a href="beef.html">Beef</a>
+      <a href="chicken.html">Chicken</a>
+      <a href="fish.html">Fish</a>
+      <a href="veggies.html">Veggies</a>
+    </div>
+  </div>
+</nav>
