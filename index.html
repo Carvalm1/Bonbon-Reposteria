@@ -2,59 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bombóncito Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bonbon Repostería</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<!-- TOP OF index.html -->
 <body>
-  <header class="header">
-    <img src="logo.png" alt="Bombóncito Logo" class="logo" />
+
+  <!-- Logo at Top Center -->
+  <header class="logo-container">
+    <img src="logo.png" alt="Bonboncito Logo" class="logo" />
   </header>
-  <main class="homepage-main">
-    <section class="recipe-category">
-      <div class="category-icon">
-        <img src="baking-icon.png" alt="Baking Icon" />
-        <h2>Baking Recipes</h2>
-        <div class="subtabs">
-          <a href="sweet.html">Sweet</a>
-          <a href="salty.html">Salty</a>
-        </div>
-      </div>
 
-      <div class="category-icon">
-        <img src="cooking-icon.png" alt="Cooking Icon" />
-        <h2>Cooking Recipes</h2>
-        <div class="subtabs">
-          <a href="beef.html">Beef</a>
-          <a href="chicken.html">Chicken</a>
-          <a href="fish.html">Fish</a>
-          <a href="veggies.html">Vegetables</a>
-        </div>
+  <!-- Main Navigation: Baking & Cooking Icons -->
+  <section class="nav-icons">
+    <div class="nav-item">
+      <img src="baking-icon.png" alt="Baking Icon" />
+      <span>Baking</span>
+      <div class="dropdown">
+        <a href="Sweet.html">Sweet</a>
+        <a href="Salty.html">Salty</a>
       </div>
-    </section>
-
-    <section class="weekly-star">
-      <h2>Weekly Star Recipes ✨</h2>
-      <div class="weekly-grid">
-        <div class="recipe-card">
-          <a href="#">
-            <img src="star-recipe1.jpg" alt="Weekly Star Recipe 1">
-            <h3>Strawberry Shortcake</h3>
-          </a>
-        </div>
-        <div class="recipe-card">
-          <a href="#">
-            <img src="star-recipe2.jpg" alt="Weekly Star Recipe 2">
-            <h3>Grilled Lemon Chicken</h3>
-          </a>
-        </div>
+    </div>
+    <div class="nav-item">
+      <img src="cooking-icon.png" alt="Cooking Icon" />
+      <span>Cooking</span>
+      <div class="dropdown">
+        <a href="Beef.html">Beef</a>
+        <a href="Chicken.html">Chicken</a>
+        <a href="Fish.html">Fish</a>
+        <a href="Veggies.html">Vegetables</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Bombóncito. All rights reserved.</p>
-  </footer>
+  <!-- Weekly Star Recipes Section -->
+  <section class="weekly-stars">
+    <h2>Weekly Star Recipes ˖⁺‧₊˚❀˚₊‧⁺˖</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <a href="Sweet.html">
+          <img src="star-recipe1.jpg" alt="Strawberry Cake" />
+          <h3>Strawberry Cake</h3>
+        </a>
+      </div>
+      <div class="recipe-card">
+        <a href="Beef.html">
+          <img src="star-recipe2.jpg" alt="Beef Stew" />
+          <h3>Beef Stew</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
