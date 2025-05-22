@@ -164,31 +164,32 @@ body {
   .logo {
     width: 100px;
   }
-}
-.top-bar {
+.top-right-bar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+  gap: 15px;
+  z-index: 100;
 }
 
 .search-bar {
-  padding: 8px 12px;
+  padding: 6px 12px;
   border: 2px solid #cc3366;
   border-radius: 20px;
   font-family: 'Comic Sans MS', cursive;
   font-size: 1em;
-  width: 200px;
+  width: 160px;
+  background-color: #fff0f6;
 }
 
 .top-link {
   text-decoration: none;
-  font-size: 1em;
-  padding: 8px 12px;
+  font-size: 0.95em;
+  padding: 6px 10px;
   border: 2px dashed #cc3366;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: #fff0f6;
   color: #cc3366;
   font-family: 'Comic Sans MS', cursive;
@@ -197,5 +198,5 @@ body {
 .flower-link::before,
 .flower-link::after {
   content: '❀';
-  margin: 0 4px;
+  margin: 0 3px;
 }
