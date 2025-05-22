@@ -2,36 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sweet Recipes - Bombóncito</title>
+  <title>Sweet Recipes</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Bombóncito Logo" class="logo" />
-    <h1>Sweet Recipes</h1>
-    <p>Explore our delightful selection of sweet baked treats!</p>
-  </header>
 
-  <main class="recipe-grid">
-    <div class="recipe-card">
-      <a href="churros.html">
-        <img src="churros.jpg" alt="Churros">
-        <h2>Churros</h2>
-      </a>
-    </div>
-    <div class="recipe-card">
-      <a href="fruitcake.html">
-        <img src="fruitcake.jpg" alt="Fruit Cake">
-        <h2>Fruit Cake</h2>
-      </a>
-    </div>
-    <!-- Add more sweet recipes here -->
-  </main>
+  <a href="index.html" class="back-arrow">←</a>
 
-  <footer>
-    <p>&copy; 2025 Bombóncito. All rights reserved.</p>
-  </footer>
+  <div class="recipe-container">
+    <h1>Strawberry Cake</h1>
+
+    <!-- Serving Selector -->
+    <label for="servings">Servings:</label>
+    <input type="number" id="servings" value="4" min="1" />
+
+    <ul id="ingredient-list">
+      <li data-base="2">2 cups flour</li>
+      <li data-base="1">1 cup sugar</li>
+      <li data-base="0.5">0.5 cups butter</li>
+      <li data-base="3">3 eggs</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
