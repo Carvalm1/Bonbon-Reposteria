@@ -1,16 +1,22 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const bakingMenu = document.querySelector('.baking-menu');
-  const foodMenu = document.querySelector('.food-menu');
+// Tab toggle functionality for homepage
 
-  if (bakingMenu) {
-    bakingMenu.addEventListener('click', function () {
-      document.querySelector('.baking-submenu').classList.toggle('show');
-    });
-  }
+document.querySelectorAll(".tab").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const tabId = tab.getAttribute("data-tab");
+    const tabContent = document.getElementById(tabId);
 
-  if (foodMenu) {
-    foodMenu.addEventListener('click', function () {
-      document.querySelector('.food-submenu').classList.toggle('show');
+    // Hide all tab contents
+    document.querySelectorAll(".tab-content").forEach((content) => {
+      if (content !== tabContent) content.style.display = "none";
     });
-  }
+
+    // Toggle selected tab content
+    if (tabContent.style.display === "block") {
+      tabContent.style.display = "none";
+    } else {
+      tabContent.style.display = "block";
+    }
+  });
 });
+
+// Optional: Simple search bar filter on homepage recipe titles (if you add them later)
